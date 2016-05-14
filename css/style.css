@@ -1,0 +1,104 @@
+html,
+body {
+    height: 100%;
+    font-family: 'Ubuntu', serif;
+}
+
+.carousel,
+.item,
+.active {
+    height: 100%;
+}
+
+.carousel-inner {
+    height: 100%;
+}
+
+/* Background images are set within the HTML using inline CSS, not here */
+
+.fill {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+footer {
+    margin: 50px 0;
+}
+
+.form-control{
+    border: 3px solid black;
+}
+
+.panel {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.text-snippet{
+    text-align: left;
+}  
+
+.form-group {
+    position:absolute;
+    z-index:2;
+    top: 60%;
+    left: 10%;
+    right:auto;
+    bottom:auto;
+    width: 80%;
+}
+
+.form-group-fixed {
+    top: 0;
+    z-index: 10000;
+    position: fixed;
+    width: 100%;
+    margin-left: 80px;
+}
+
+#map_canvas {
+    width: 100%;
+    height: 100%;
+    float: right;
+    position: fixed;
+}
+
+#mapContainer {
+    width: 50%;
+    height: 100%;
+    float: right;
+}
+
+.panel-body{
+    background-color: whitesmoke;
+}
+
+#musicGenre, #city{
+    z-index:20;
+}
+
+a.navbar-brand{
+    float: none;
+    padding-right: 24px;
+    margin-left: -75px;
+    font-size: 22px;
+}
+
+span img{
+    margin-left: -15%;
+}
+
+#searchResults{
+    float: left;
+}
+
+.stick{
+    position: fixed;
+    top: 10%;
+    left: 50%;
+}

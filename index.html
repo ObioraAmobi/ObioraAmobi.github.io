@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <link rel=icon href="nightowl_logo_small.png" sizes="16x16" type="image/png">
+
+    <title>NightOwl</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu">
+
+        <!-- Script -->
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <!--
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jsSHA/2.0.2/sha1.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/oauth-io/0.5.2/oauth.min.js"></script>
+    -->
+
+    <!--
+    <script type="text/javascript" src="http://oauth.googlecode.com/svn/code/javascript/oauth.js"></script>
+    <script type="text/javascript" src="http://oauth.googlecode.com/svn/code/javascript/sha1.js"></script> -->
+
+    <script src="js/oauth.js"></script>
+    <script src="js/sha1.js"></script>
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <span><img src="nightowl_logo.png" width="10%"><a class="navbar-brand" style="text-shadow: 1px 1px 1px #00d7b2;"href="#">NightOwl</a></span>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Full Page Image Background Carousel Header -->
+    <header id="myCarousel" class="carousel slide">
+    
+
+        <div id="searchForm" class="form-group">    
+            <div id="searchFormContainer" class="container">
+                <div class="row">
+                <div class="col-md-5">
+                    <input id="musicGenre" type="text" class="form-control input-lg" placeholder="Music genre...">  
+                </div>
+                <div class="col-md-5">
+                    <input id="city" type="text" class="form-control input-lg" placeholder="City...">   
+                </div>
+                <div class="col-md-2">
+                    <a id="searchButton" class="btn btn-lg btn-success" href="#searchResults" role="button">GO</a>
+                    <a id="newSearch" href="#myCarousel" onClick="window.location.reload()" class="btn btn-lg btn-success" role="button">GO Again</a>
+                </div>
+                </div>
+            </div>
+        </div>
+    
+
+        <!-- Wrapper for Slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+
+                <!--  -->
+
+                <div class="fill" style="background-image:url('http://images.fineartamerica.com/images-medium-large/michael-jackson-force-david-lloyd-glover.jpg');"></div>
+            </div>
+            <div class="item">
+
+                <!--  -->
+
+                <div class="fill" style="background-image:url('http://images.fineartamerica.com/images-medium-large-5/tina-turner-dan-haraga.jpg');"></div>
+            </div>
+            <div class="item">
+
+                <!--  -->
+
+                <div class="fill" style="background-image:url('http://www.creativeboom.com/uploads/articles/0a/0a8513f5bff76a099e092678f8b254044a404cd9_1200.jpg');"></div>
+            </div>
+            <div class="item">
+
+                <!--  -->
+
+                <div class="fill" style="background-image:url('http://img15.deviantart.net/62f5/i/2009/104/d/8/biggie_hip_hop_painting_by_kyle_lambert.jpg');"></div>
+            </div>
+            <div class="item">
+
+                <!--  -->
+
+                <div class="fill" style="background-image:url('http://images.fineartamerica.com/images-medium-large-5/bob-marley-02-yuriy-shevchuk.jpg');"></div>
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="icon-prev"></span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="icon-next"></span>
+        </a>
+
+    </header>
+
+    <!-- Communication with AJAX -->
+        <div id="mapContainer" style="background-image:url('ignasi_pattern_s.png');">
+            <div id="map_canvas" class='col-md-12'></div>
+        </div>
+        <div id="searchResults" class="container-fluid col-md-6" style="background-image:url('ignasi_pattern_s.png');">
+
+            <div id="content">
+                    
+            </div>
+        </div>
+
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script> -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <!-- Script to Activate the Carousel -->
+    <script>
+    $('.carousel').carousel({
+        interval: 5000 //changes the speed
+    })
+    </script>
+
+    <!-- <script async defer src="https://maps.googleapis.com/maps/api/js"></script> -->
+
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCiyk4q4KQcqF1X1xPqu9rL033rLfqjRw0" type="text/javascript"></script>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
